@@ -101,7 +101,7 @@ public class webDriverUtil {
 		public void takeScreenshotOfWebPage(WebDriver driver, String ssName) throws IOException {
 			TakesScreenshot tks= (TakesScreenshot) driver;
 			File src = tks.getScreenshotAs(OutputType.FILE);
-			File dest= new File("./automationProject\\errorShot"+ssName+".png");
+			File dest= new File("./\\errorShot\\"+ssName+Math.random()+ ".png");
 			FileHandler.copy(src, dest);
 		}
 
