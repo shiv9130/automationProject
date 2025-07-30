@@ -14,7 +14,7 @@ public class homePage extends basePage {
 	@FindBy(linkText = "Home")
 	private WebElement linkHome;
 	
-	@FindBy(linkText = "Products")
+	@FindBy(linkText = " Products")
 	private WebElement linkProduct;
 	
 	@FindBy(linkText = "Cart")
