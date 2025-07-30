@@ -1,0 +1,45 @@
+package objectRepo;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class homePage extends basePage {
+
+	public homePage(WebDriver driver) {
+		super(driver);
+		
+	}
+	
+	@FindBy(linkText = "Home")
+	private WebElement linkHome;
+	
+	@FindBy(linkText = "Products")
+	private WebElement linkProduct;
+	
+	@FindBy(linkText = "Cart")
+	private WebElement linkCart;
+	
+	@FindBy(partialLinkText  = "Signup / Login")
+	private WebElement linkSignupLogin;
+
+	public WebElement getLinkHome() {
+		return linkHome;
+	}
+
+	public WebElement getLinkProduct() {
+		return linkProduct;
+	}
+
+	public WebElement getLinkCart() {
+		return linkCart;
+	}
+
+	public WebElement getLinkSignupLogin() {
+		return linkSignupLogin;
+	}
+	
+	
+	
+
+}
