@@ -31,6 +31,12 @@ public class login extends basePage {
 	public WebElement getBtnlLogin() {
 		return btnlLogin;
 	}
+
+	public void toLogin(String Uname, String pswd) {
+		txtlEmail.sendKeys(Uname);
+		txtlpass.sendKeys(pswd);
+		btnlLogin.click();
+	}
 	
 	
 

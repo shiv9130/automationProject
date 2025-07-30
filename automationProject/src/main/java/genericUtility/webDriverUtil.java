@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class webDriverUtil {
 	
-	public class WebDriverUtility {
+
 
 
 		//implicit wait
@@ -104,9 +104,6 @@ public class webDriverUtil {
 			File dest= new File("./errorShots/"+ssName+".png");
 			FileHandler.copy(src, dest);
 		}
-
-
-	}
 
 
 }

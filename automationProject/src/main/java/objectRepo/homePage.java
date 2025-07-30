@@ -3,6 +3,7 @@ package objectRepo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import genericUtility.webDriverUtil;
 
 public class homePage extends basePage {
 
@@ -39,7 +40,9 @@ public class homePage extends basePage {
 		return linkSignupLogin;
 	}
 	
+	public void ToLogOut() {
+		webDriverUtil wutil = new webDriverUtil();
+		//pending
+	}
 	
-	
-
 }
