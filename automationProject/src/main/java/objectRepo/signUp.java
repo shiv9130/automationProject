@@ -11,17 +11,20 @@ public class signUp extends basePage {
 		super(driver);
 		
 	}
-	@FindBy(id = "id_gender1")
-	private WebElement rbtnM;
-	
-	@FindBy(id = "id_gender2")
-	private WebElement rbtnF;
-	
 	@FindBy(id = "name")
 	private WebElement txtName;
 	
 	@FindBy(id = "email")
 	private WebElement txtEmail;
+	
+	@FindBy(xpath = "//button[text()='Signup']")
+	private WebElement btnSignUp;
+	
+	@FindBy(id = "id_gender1")
+	private WebElement rbtnM;
+	
+	@FindBy(id = "id_gender2")
+	private WebElement rbtnF;
 	
 	@FindBy(id = "password")
 	private WebElement txtPassword;
@@ -59,7 +62,6 @@ public class signUp extends basePage {
 	@FindBy(id = "country")
 	private WebElement dcountry;
 	
-	
 	@FindBy(id = "state")
 	private WebElement txtstate;
 	
@@ -86,6 +88,18 @@ public class signUp extends basePage {
     new Select(ddays).selectByVisibleText(day);//new object create for days, months, year
     new Select(dmonths).selectByVisibleText(month);
     new Select(dyears).selectByVisibleText(year);
-}
-
+   }
+    
+    public void name(String name) {
+    txtName.sendKeys(name);
+    }
+    
+    public void email(String email) {
+        txtEmail.sendKeys(email);
+    }
+    public void signClick() {
+    btnSignUp.click();
+    }
+    
+    
 }
