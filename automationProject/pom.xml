@@ -44,11 +44,5 @@
 			<version>5.0.9</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>AdvSelenium</groupId>
-			<artifactId>AdvSelenium</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 </project>
