@@ -15,7 +15,7 @@ import baseClassUtility.BaseClass;
 
 public class listenerTest implements ITestListener{
 	
-	protected static WebDriver driver;
+	static WebDriver driver;
 
 	@Override
 	public void onTestSuccess(ITestResult result) {

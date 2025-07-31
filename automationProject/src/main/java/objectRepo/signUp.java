@@ -89,17 +89,94 @@ public class signUp extends basePage {
     new Select(dmonths).selectByVisibleText(month);
     new Select(dyears).selectByVisibleText(year);
    }
+
+	public WebElement getTxtName() {
+		return txtName;
+	}
+
+	public WebElement getTxtEmail() {
+		return txtEmail;
+	}
+
+	public WebElement getBtnSignUp() {
+		return btnSignUp;
+	}
+
+	public WebElement getRbtnM() {
+		return rbtnM;
+	}
+
+	public WebElement getRbtnF() {
+		return rbtnF;
+	}
+
+	public WebElement getTxtPassword() {
+		return txtPassword;
+	}
+
+	public WebElement getDdays() {
+		return ddays;
+	}
+
+	public WebElement getDmonths() {
+		return dmonths;
+	}
+
+	public WebElement getDyears() {
+		return dyears;
+	}
+
+	public WebElement getChknewsletter() {
+		return chknewsletter;
+	}
+
+	public WebElement getChkoptin() {
+		return chkoptin;
+	}
+
+	public WebElement getTxtfirst_name() {
+		return txtfirst_name;
+	}
+
+	public WebElement getTxtlast_name() {
+		return txtlast_name;
+	}
+
+	public WebElement getTxtcompany() {
+		return txtcompany;
+	}
+
+	public WebElement getTxtaddress1() {
+		return txtaddress1;
+	}
+
+	public WebElement getTxtaddress2() {
+		return txtaddress2;
+	}
+
+	public WebElement getDcountry() {
+		return dcountry;
+	}
+
+	public WebElement getTxtstate() {
+		return txtstate;
+	}
+
+	public WebElement getTxtcity() {
+		return txtcity;
+	}
+
+	public WebElement getTxtzipcode() {
+		return txtzipcode;
+	}
+
+	public WebElement getTxtmobile_number() {
+		return txtmobile_number;
+	}
+
+	public WebElement getBtnCreateAct() {
+		return btnCreateAct;
+	}
     
-    public void name(String name) {
-    txtName.sendKeys(name);
-    }
-    
-    public void email(String email) {
-        txtEmail.sendKeys(email);
-    }
-    public void signClick() {
-    btnSignUp.click();
-    }
-    
-    
+      
 }
