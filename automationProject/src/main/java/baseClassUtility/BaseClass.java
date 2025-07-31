@@ -23,7 +23,7 @@ import objectRepo.login;
 
 public class BaseClass {
 	
-	public static WebDriver sDriver= null;
+	public static WebDriver sDriver= null;//for listeners 
 	public webDriverUtil wutil = new webDriverUtil();
 	public propertiesUtil putil = new propertiesUtil();
 	public WebDriver driver = null;
@@ -41,7 +41,7 @@ public class BaseClass {
 	@BeforeClass(groups = {"SmokeTestCase","RegressionTestCase"})
 	public void configBc() throws IOException {
 		String BROWSER = putil.propUtil("Browser");
-		String URL = putil.propUtil("Url");
+		String URL = putil.propUtil("URL");
 		// cross Browser Testing
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
