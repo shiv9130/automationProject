@@ -1,5 +1,7 @@
 package practiceFb;
 
+import java.io.IOException;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -15,7 +17,7 @@ public class loginPage extends BaseClass{
 	
 	
 	@Test
-	public void loginTest(){
+	public void loginTest() throws IOException{
 		homePage hp = new homePage(driver);
 		hp.getLinkSignupLogin().click();
 		login lp = new login(driver);

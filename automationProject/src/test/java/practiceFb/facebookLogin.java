@@ -22,6 +22,8 @@ public class facebookLogin extends baseFb {
 		fr.getTxtEmail().sendKeys("8871413176");
 		fr.getTxtpass().sendKeys("88714");
 		fr.getBtnLgn().click();
+		
+		
 		Assert.assertEquals(driver.getTitle(), "Facebook – log in or sign up");
 	}
 
