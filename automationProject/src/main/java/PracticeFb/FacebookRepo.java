@@ -33,15 +33,6 @@ public class FacebookRepo extends basePage{
 
 	public WebElement getBtnLgn() {
 		return btnLgn;
-	}
+	}}
 	
-	/*public void inputEmail(String Email) {
-		txtEmail.sendKeys(Email);
-	}
-	public void inputPass(String pass) {
-		txtpass.sendKeys(pass);
-	}
-	public void clickLogin() {
-		btnLgn.click();
-	}*/
-}
+	

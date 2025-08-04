@@ -13,7 +13,7 @@ import org.testng.Reporter;
 
 public class listenerTest implements ITestListener{
 	
-	protected static WebDriver driver;
+	public static WebDriver driver;
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
