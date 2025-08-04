@@ -42,7 +42,7 @@ public class homePage extends basePage {
 	
 	public void ToLogOut() {
 		webDriverUtil wutil = new webDriverUtil();
-		//pending
+		wutil.moveToElement(driver, linkCart);
 	}
 	
 }

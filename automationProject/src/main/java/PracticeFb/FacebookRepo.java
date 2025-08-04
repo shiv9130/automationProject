@@ -35,7 +35,7 @@ public class FacebookRepo extends basePage{
 		return btnLgn;
 	}
 	
-	public void inputEmail(String Email) {
+	/*public void inputEmail(String Email) {
 		txtEmail.sendKeys(Email);
 	}
 	public void inputPass(String pass) {
@@ -43,5 +43,5 @@ public class FacebookRepo extends basePage{
 	}
 	public void clickLogin() {
 		btnLgn.click();
-	}
+	}*/
 }

@@ -11,21 +11,19 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-import baseClassUtility.BaseClass;
-
 public class listenerTest implements ITestListener{
 	
-	static WebDriver driver;
+	protected static WebDriver driver;
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		
 		ITestListener.super.onTestSuccess(result);
-		String methodname = result.getMethod().getMethodName();
+		//String methodname = result.getMethod().getMethodName();
 		Reporter.log("test case passed");
-		TakesScreenshot ts = (TakesScreenshot) BaseClass.sDriver;
+		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File tgt = new File("./automationProject\\sshot"+methodname+Math.random()+".png");
+		File tgt = new File("./automationProject\\sshot"+Math.random()+".png");
 		try {
 			FileHandler.copy(src, tgt);
 		} catch (IOException e) {			
@@ -37,11 +35,11 @@ public class listenerTest implements ITestListener{
 	public void onTestFailure(ITestResult result) {
 		
 		ITestListener.super.onTestFailure(result);
-		String methodname = result.getMethod().getMethodName();
-		Reporter.log("test case passed");
-		TakesScreenshot ts = (TakesScreenshot) BaseClass.sDriver;
+		//String methodname = result.getMethod().getMethodName();
+		Reporter.log("test case failed");
+		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File tgt = new File("./automationProject\\sshot"+methodname+Math.random()+".png");
+		File tgt = new File("./automationProject\\sshot"+Math.random()+".png");
 		try {
 			FileHandler.copy(src, tgt);
 		} catch (IOException e) {			
