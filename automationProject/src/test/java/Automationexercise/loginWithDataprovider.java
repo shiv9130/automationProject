@@ -4,12 +4,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import baseClassUtility.BaseClass;
+import objectRepo.login;
 
 public class loginWithDataprovider extends BaseClass {
 	
 	@DataProvider
 	public Object[][] getLoginDetails() {
-		Object[][] objL = new Object[3][2];
+		Object[][] objL = new Object[2][2];
 		objL[0][0]="yuvi950@gmail.com";
 		objL[0][1]="yuvi@123";
 		objL[1][0]="nitamitali60@gmail.com";
@@ -21,9 +22,8 @@ public class loginWithDataprovider extends BaseClass {
 	}
 	@Test(dataProvider = "getLoginDetails")
 	public void loginDetails(String un, String pw) {
-		loginPage lp = new loginPage();
+		login lp = new login(driver);
 		lp.toLogin(un, pw);
-		
 		
 	}
 }

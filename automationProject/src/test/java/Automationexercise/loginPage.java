@@ -30,9 +30,4 @@ public class loginPage extends BaseClass{
 		
 	}
 
-	public void toLogin(String un, String pw) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
