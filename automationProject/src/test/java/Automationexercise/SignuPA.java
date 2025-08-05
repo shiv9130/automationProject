@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import baseClassUtility.BaseClass;
 import genericUtility.excelUtil;
 import genericUtility.javaUtility;
-import genericUtility.webDriverUtil;
 import objectRepo.homePage;
 import objectRepo.signUp;
 
@@ -27,8 +26,8 @@ public class SignuPA extends BaseClass {
 		sp.getTxtPassword().sendKeys("Nita@239");
 		sp.selectDateOfBirth("1", "June", "2000");
 		sp.country("India");
-		sp.getChknewsletter().sendKeys("");
-		sp.getChkoptin().sendKeys("");
+		sp.getChknewsletter().click();
+		sp.getChkoptin().click();
 		sp.getTxtfirst_name().sendKeys("Nita");
 		sp.getTxtlast_name().sendKeys("Mitali");;
 		sp.getTxtcompany().sendKeys("tesca");
