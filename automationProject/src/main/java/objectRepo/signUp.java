@@ -11,10 +11,10 @@ public class signUp extends basePage {
 		super(driver);
 		
 	}
-	@FindBy(id = "name")
+	@FindBy(xpath = "//input[@placeholder=\"Name\"]")
 	private WebElement txtName;
 	
-	@FindBy(id = "email")
+	@FindBy(xpath = "//input[@name=\"email\" and @data-qa=\"signup-email\"]")
 	private WebElement txtEmail;
 	
 	@FindBy(xpath = "//button[text()='Signup']")

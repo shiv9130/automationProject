@@ -1,17 +1,15 @@
-package practiceFb;
+package Automationexercise;
 
 import java.io.IOException;
 
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import Listeners.listenerTest;
 import baseClassUtility.BaseClass;
 import genericUtility.propertiesUtil;
 import objectRepo.homePage;
 import objectRepo.login;
 
-@Listeners(listenerTest.class)
+
 public class loginPage extends BaseClass{
 	
 	
@@ -22,9 +20,11 @@ public class loginPage extends BaseClass{
 		hp.getLinkSignupLogin().click();
 		login lp = new login(driver);
 		propertiesUtil pu = new propertiesUtil();
-		String email = pu.propUtil(null);
-		String pass = pu.propUtil(null);
-		lp.toLogin(email, pass);
+	    String un = pu.propUtil("Username");
+	    String pw = pu.propUtil("Password");
+	    System.out.println(un);
+	    System.out.println(pw);
+	    lp.toLogin(un, pw);
 		
 		
 		

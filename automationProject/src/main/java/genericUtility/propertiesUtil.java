@@ -7,7 +7,7 @@ import java.util.Properties;
 public class propertiesUtil {
 	
 	public String propUtil(String key) throws IOException {
-		FileInputStream fis = new FileInputStream("./TestData/testData.properties");
+		FileInputStream fis = new FileInputStream("./TestData\\Browser edge.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
 		String data = prop.getProperty(key);
