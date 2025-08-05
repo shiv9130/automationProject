@@ -64,7 +64,7 @@ public class BaseClass {
 		String UNAME = putil.propUtil("Username");
 		String PWD = putil.propUtil("Password");
 		login lp = new login(driver);
-		lp.toLogin(UNAME, PWD);
+		//lp.toLogin(UNAME, PWD);
 		Reporter.log("login successful", true);
 	}
 

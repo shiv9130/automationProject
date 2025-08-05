@@ -21,7 +21,7 @@ public class homePage extends basePage {
 	@FindBy(linkText = "Cart")
 	private WebElement linkCart;
 	
-	@FindBy(partialLinkText  = "Signup / Login")
+	@FindBy(xpath  = "//a[@href=\"/login\"]")
 	private WebElement linkSignupLogin;
 
 	public WebElement getLinkHome() {
