@@ -11,14 +11,13 @@ public class loginWithDataprovider extends BaseClass {
 	
 	@DataProvider
 	public Object[][] getLoginDetails() {
-		Object[][] objL = new Object[2][2];
+		Object[][] objL = new Object[3][2];
 		objL[0][0]="yuvi950@gmail.com";
 		objL[0][1]="yuvi@123";
 		objL[1][0]="nitamitali60@gmail.com";
 		objL[1][1]="Nita@239";
-		/*
-		 * objL[2][0]="shiv950@gmail.com"; objL[2][1]="yuvi950";
-		 */
+		/*objL[2][0]="shiv950@gmail.com";
+		objL[2][1]="yuvi950";*/
 		return objL;
 		
 	}
@@ -28,8 +27,7 @@ public class loginWithDataprovider extends BaseClass {
 		login lp = new login(driver);
 		hp.getLinkSignupLogin().click();
 		lp.toLogin(un, pw);
-		System.out.println(un);
-		System.out.println(pw);
+		
 		
 	}
 }
