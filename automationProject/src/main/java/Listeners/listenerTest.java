@@ -1,12 +1,8 @@
 package Listeners;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.io.FileHandler;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -29,7 +25,7 @@ public class listenerTest implements ITestListener {
 		try {
 			wu.takeScreenshotOfWebPage(baseFb.sDriver, methodname);
 		} catch (IOException e) {
-		 e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 
@@ -49,9 +45,8 @@ public class listenerTest implements ITestListener {
 		try {
 			wu.takeScreenshotOfWebPage(baseFb.sDriver, methodname);
 		} catch (IOException e) {
-		 e.printStackTrace();
+			e.printStackTrace();
 		}
-
 	}
 
 }
