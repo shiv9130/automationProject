@@ -20,7 +20,7 @@ public class facebookLogin extends baseFb {
 		FacebookRepo fr = new FacebookRepo(driver);
 		
 		fr.getTxtEmail().sendKeys("8871413176");
-		fr.getTxtpass().sendKeys("88714");
+		fr.getTxtpass().sendKeys("8871413176");
 		fr.getBtnLgn().click();
 		
 		

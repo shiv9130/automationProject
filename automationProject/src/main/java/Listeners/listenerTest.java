@@ -23,15 +23,13 @@ public class listenerTest implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 
 		ITestListener.super.onTestSuccess(result);
-		// String methodname = result.getMethod().getMethodName();
 		Reporter.log("test case passed");
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		File tgt = new File("./automationProject\\sshot" + Math.random() + ".png");
+		String methodname = result.getMethod().getMethodName();
+
 		try {
-			FileHandler.copy(src, tgt);
+			wu.takeScreenshotOfWebPage(baseFb.sDriver, methodname);
 		} catch (IOException e) {
-			e.printStackTrace();
+		 e.printStackTrace();
 		}
 	}
 
