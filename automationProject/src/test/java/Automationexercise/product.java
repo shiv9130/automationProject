@@ -6,14 +6,14 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import Listeners.Listener_ExtentReport;
+import Listeners.ExtentReportManager;
 import baseClassUtility.BaseClass;
 import genericUtility.propertiesUtil;
 import objectRepo.ProductPage;
 import objectRepo.homePage;
 import objectRepo.login;
 
-//@Listeners(Listener_ExtentReport.class)
+@Listeners(ExtentReportManager.class)
 public class product extends BaseClass {
 	propertiesUtil pu = new propertiesUtil();
 	
@@ -45,6 +45,8 @@ public class product extends BaseClass {
 		
 		hp.getLinkCart().click();
 		
+		driver.findElement(By.xpath("//a[text()='Proceed To Checkout']")).click();
+		driver.findElement(By.linkText("Place Orde")).click();
 
 		
 	}
