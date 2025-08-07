@@ -8,6 +8,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import PracticeFb.baseFb;
+import baseClassUtility.BaseClass;
 import genericUtility.webDriverUtil;
 
 public class listenerTest implements ITestListener {
@@ -43,7 +44,7 @@ public class listenerTest implements ITestListener {
 		 */
 
 		try {
-			wu.takeScreenshotOfWebPage(baseFb.sDriver, methodname);
+			wu.takeScreenshotOfWebPage(BaseClass.sDriver, methodname);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
