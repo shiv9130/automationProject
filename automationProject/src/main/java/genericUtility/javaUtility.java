@@ -31,4 +31,12 @@ public class javaUtility {
 		return reqDate;
 	}
 
+	public String getSystemDateAndTimeForScreenshot() {
+		String dateAndTime = new Date().toString();
+		// Tue Jun 10 11:31:36 IST 2025
+		String dateForSS = dateAndTime.replace(" ", "_").replace(":", "_");
+		return dateForSS;
+	}
+
+
 }
