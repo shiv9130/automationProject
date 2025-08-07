@@ -9,6 +9,7 @@
     <classes>
       <class name="Automationexercise.loginWithDataprovider"/>
       <class name="Automationexercise.loginPage"/>
+        <class name="Automationexercise.product"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

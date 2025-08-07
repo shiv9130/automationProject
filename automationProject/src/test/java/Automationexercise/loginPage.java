@@ -2,14 +2,16 @@ package Automationexercise;
 
 import java.io.IOException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import Listeners.listenerTest;
 import baseClassUtility.BaseClass;
 import genericUtility.propertiesUtil;
 import objectRepo.homePage;
 import objectRepo.login;
 
-
+//@Listeners(listenerTest.class)
 public class loginPage extends BaseClass{
 	
 	
