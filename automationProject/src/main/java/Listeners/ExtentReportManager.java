@@ -34,7 +34,7 @@ public class ExtentReportManager implements ITestListener {
 		String cd = ju.currentdate();
 		
 		reportName = "Test-Report-"+cd+".html";//name
-		sparkrReporter = new ExtentSparkReporter("./reports"+cd+"reportName");//location
+		sparkrReporter = new ExtentSparkReporter("./\\Extentreports"+cd+"reportName");//location
 		sparkrReporter.config().setDocumentTitle("AutomationReport");
 		sparkrReporter.config().setReportName("AutomationExercise");
 		sparkrReporter.config().setTheme(Theme.DARK);
