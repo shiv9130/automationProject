@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="Listeners.Listener_ExtentReport"></listener>
+		<listener class-name="Listeners.listenerTest"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Automationexercise.loginWithDataprovider"/>
+      <class name="Automationexercise.loginPage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

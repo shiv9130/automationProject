@@ -1,12 +1,7 @@
 package Listeners;
 
-import java.io.File;
-import java.io.IOException;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.io.FileHandler;
-import org.testng.ISuite;
+import java.io.IOException;import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -18,12 +13,15 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import PracticeFb.baseFb;
 import baseClassUtility.BaseClass;
 import genericUtility.javaUtility;
+import genericUtility.webDriverUtil;
 
 public class Listener_ExtentReport implements ISuiteListener, ITestListener {
 	public ExtentReports report;
 	public ExtentTest test;
+	webDriverUtil wu = new webDriverUtil();
 
 	@Override
 	public void onStart(ISuite suite) {
@@ -60,15 +58,9 @@ public class Listener_ExtentReport implements ISuiteListener, ITestListener {
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		test = report.createTest(methodName);
-		javaUtility jutil = new javaUtility();
-		String dateTime = jutil.getSystemDateAndTimeForScreenshot();
-		TakesScreenshot tks = (TakesScreenshot) BaseClass.sDriver;
-		File temp = tks.getScreenshotAs(OutputType.FILE);
-		test.addScreenCaptureFromBase64String(methodName + "_" + dateTime);
-		File perm = new File("./errorshots/myntra.png");
 
 		try {
-			FileHandler.copy(temp, perm);
+			wu.takeScreenshotOfWebPage(BaseClass.sDriver, methodName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
