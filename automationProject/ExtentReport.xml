@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="Listeners.Listener_ExtentReport"></listener>
-		<listener class-name="Listeners.listenerTest"></listener>
+		<listener class-name="Listeners.ListenerTest"></listener>
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>

@@ -1,14 +1,11 @@
 package Automationexercise;
 
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
-import Listeners.listenerTest;
 import PracticeFb.FacebookRepo;
 import PracticeFb.baseFb;
 import junit.framework.Assert;
 
-@Listeners(listenerTest.class)
+//@Listeners(listenerTest.class)
 public class facebookLogin extends baseFb {
 	
 	@Test()
