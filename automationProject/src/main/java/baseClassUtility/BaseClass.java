@@ -26,7 +26,7 @@ public class BaseClass {
 	public static WebDriver sDriver = null;// for listeners
 	public webDriverUtil wutil = new webDriverUtil();
 	public propertiesUtil putil = new propertiesUtil();
-	public WebDriver driver = null;
+	public static WebDriver driver = null;
 
 	@BeforeSuite(groups = { "SmokeTestCase", "RegressionTestCase" })
 	public void configBs() {

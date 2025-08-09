@@ -17,7 +17,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import NinzaCrmBase.baseClass;
+import baseClassUtility.BaseClass;
 import genericUtility.javaUtility;
 
 public class ExtentReportManager implements ITestListener {
@@ -31,10 +31,10 @@ public class ExtentReportManager implements ITestListener {
 	
 	@Override
 	public void onStart(ITestContext context) {
-		String cd = ju.currentdate();
+		String cd = ju.getSystemDateAndTimeForScreenshot();
 		
 		reportName = "Test-Report-"+cd+".html";//name
-		sparkrReporter = new ExtentSparkReporter("./\\Extentreports"+cd+"reportName");//location
+		sparkrReporter = new ExtentSparkReporter("./\\Extentreports"+cd+reportName);//location
 		sparkrReporter.config().setDocumentTitle("AutomationReport");
 		sparkrReporter.config().setReportName("AutomationExercise");
 		sparkrReporter.config().setTheme(Theme.DARK);
@@ -71,9 +71,9 @@ public class ExtentReportManager implements ITestListener {
 			extentTest.assignCategory(result.getMethod().getGroups());
 			extentTest.log(Status.FAIL, result.getName()+"execution failed");
 			extentTest.log(Status.INFO, result.getThrowable().getMessage());//also print error message
-			TakesScreenshot ts= (TakesScreenshot) baseClass.sdriver;
+			TakesScreenshot ts= (TakesScreenshot) BaseClass.driver;
 			File src = ts.getScreenshotAs(OutputType.FILE);
-			File tgt = new File("./\\errorShots"+result.getName()+ "_"  +cd +".png");
+			File tgt = new File(".\\errorShot"+result.getName()+ "_"  +cd +".png");
 			try {
 				FileHandler.copy(src, tgt);
 			} catch (IOException e) {
