@@ -17,7 +17,7 @@ import objectRepo.login;
 public class product extends BaseClass {
 	propertiesUtil pu = new propertiesUtil();
 	
-	@Test
+	@Test(groups="SmokeTestCase")
 	public void productTest() throws IOException {
 		
 		//create obj. of home page
